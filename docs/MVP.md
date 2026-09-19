@@ -30,13 +30,21 @@ Validate whether users repeatedly use a skincare memory app to manage products, 
 - SkinDiaryEntry
 - ProductDecision
 
-## Product decision verdicts
+## Decision Engine
 
-- Good fit
-- Useful but redundant
-- Not needed
-- Potentially irritating
-- Need more information
+The Decision Engine is intentionally split into independently deliverable behaviors.
+
+High-level flow:
+1. Normalize candidate product
+2. Load user context
+3. Calculate need coverage
+4. Detect redundancy / replacement
+5. Evaluate compatibility / irritation risk
+6. Generate structured verdict
+7. Persist decision memory
+8. Orchestrate the end-to-end pipeline
+
+See [Decision Engine Context](DECISION_ENGINE.md).
 
 ## Build order
 
@@ -54,9 +62,12 @@ Validate whether users repeatedly use a skincare memory app to manage products, 
 - COF-116 Today routine screen
 - COF-117 Lightweight Skin Diary check-in
 
-### AI Decision
+### Product Decision
 - COF-118 Product check input flow
-- COF-119 Contextual skincare decision engine
+- COF-157–163 Decision components
+- COF-119 Decision pipeline orchestration
+- COF-164–167 AI decision / compare UX
+- COF-136 POC validation
 
 ## Explicitly deferred
 
