@@ -26,14 +26,16 @@ Mobile-first skincare memory app that remembers what a user owns, what they use,
 - AI skin scoring
 - Complex product-photo recognition as a launch dependency
 
-## Product principles
+## Shared context for AI-native development
 
-- Mobile-first
-- Personal context over generic recommendations
-- Memory over one-off answers
-- Prefer **Replace** over automatically adding more products
-- Avoid fake precision scores
-- Keep daily interactions fast and lightweight
+Before implementing Decision Engine work, read:
+
+- [Product Context](docs/PRODUCT_CONTEXT.md)
+- [Decision Engine Context](docs/DECISION_ENGINE.md)
+- [AI-Native Development Guide](docs/AI_NATIVE_DEVELOPMENT.md)
+- [MVP Scope](docs/MVP.md)
+
+**Development principle:** small deliverable, large shared context.
 
 ## Planned stack
 
@@ -41,10 +43,8 @@ Mobile-first skincare memory app that remembers what a user owns, what they use,
 - Expo (stable SDK line)
 - TypeScript
 
-Backend, authentication, persistence, and AI architecture will be decided as part of the Foundation milestone before implementation.
+Backend, authentication, persistence, and AI architecture are decided incrementally through the Foundation and Decision Engine tickets.
 
 ## Planning
 
 Product work is tracked in Linear under **Beauty & skin routine**.
-
-Initial MVP issues: `COF-110` through `COF-119`.
